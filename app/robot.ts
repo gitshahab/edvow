@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://www.edvow.com/sitemap.xml",
+    sitemap: "https://edvow.com/sitemap.xml",
   };
 }

@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     "1-on-1 Mentorship",
     "No-Cost EMI Education"
   ],
-  metadataBase: new URL("https://www.edvow.com"),
+  metadataBase: new URL("https://edvow.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Edvow | Premier Career Counselling & 2026 Admission Guidance",
+    title: "Edvow | Career Counselling, College Admissions & Expert Mentorship",
     description: "Cut through the noise and make confident, informed decisions about your future with 1-on-1 expert mentorship and career path alignment.",
-    url: "https://www.edvow.com",
+    url: "https://edvow.com",
     siteName: "Edvow",
     locale: "en_IN",
     type: "website",
