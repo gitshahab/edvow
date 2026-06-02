@@ -10,7 +10,7 @@ export function FinalCTA() {
         <p className="text-blue-100 font-sans text-lg max-w-xl mx-auto">
           Limited slots available for 2026 admissions. Secure your precision counseling today and get your global career on track.
         </p>
-        <a href="mailto:hello@edvow.com"  className="bg-white text-edvow-blue px-12 py-5 font-heading font-bold uppercase tracking-[0.2em] text-sm hover:bg-edvow-orange hover:text-white transition-all">
+        <a href="mailto:hello@edvow.com"  className="bg-white text-edvow-blue px-2 md:px-12 py-5 font-heading font-bold uppercase tracking-[0.2em] text-xs md:text-sm hover:bg-edvow-orange hover:text-white transition-all">
           Book Free Consultation
         </a>
       </div>
