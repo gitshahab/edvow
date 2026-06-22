@@ -9,22 +9,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
         {
-      url: "https://edvow.com/about",
+      url: "https://www.edvow.com/about",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://edvow.com/courses",
+      url: "https://www.edvow.com/courses",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://edvow.com/privacypolicy",
+      url: "https://www.edvow.com/privacypolicy",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.1,
     },
   ];
 }

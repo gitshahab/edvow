@@ -1,3 +1,4 @@
+import Image from "next/image";
 import GenericButton from "../ui/GenericButton";
 
 export default function Hero() {
@@ -6,10 +7,12 @@ export default function Hero() {
       
       {/* BG image Submerged */}
       <div className="absolute right-0 top-0 w-full md:w-1/2 h-full z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1170" 
-          alt="Students" 
-          className="w-full h-full object-cover grayscale-[40%] brightness-75"
+        <Image
+          src="/edvow-hero.jpg"
+          alt="Students"
+          fill
+          priority
+          className="object-cover grayscale-[40%] brightness-75"
         />
         {/* Fade-out Mask. into white/bg */}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent" />
@@ -23,7 +26,7 @@ export default function Hero() {
         <div className="max-w-2xl space-y-8">
           <h1 className="font-heading text-5xl font-bold tracking-tighter leading-[1] text-edvow-blue">
             Precision Counseling<br /> 
-            <span className="text-edvow-orange">for 2026 Admissions.</span>
+            <span className="text-edvow-orange">Online Programs for Students & Professionals</span>
           </h1>
           
           <p className="font-sans text-xl text-slate-700 max-w-md leading-relaxed">

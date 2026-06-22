@@ -1,18 +1,20 @@
+import Image from "next/image";
+
 const features = [
   {
     question: "Why Global Mobility?",
     answer: "To travel and work globally, communication is key. We bridge the gap to your dream master's degree.",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+    img: "/faq1.jpg"
   },
   {
     question: "Financial Stress?",
     answer: "Focus on your future with our No-Cost EMI options. Your education, your terms.",
-    img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+    img: "/faq2.jpg"
   },
   {
     question: "Hardware Hurdles?",
     answer: "Get a complimentary tablet with your enrollment. We provide the tools; you provide the ambition.",
-    img: "https://images.unsplash.com/photo-1561154464-82e9adf32764",
+    img: "/faq3.jpg"
   }
 ];
 
@@ -22,10 +24,13 @@ export default function Features() {
       {features.map((item, index) => (
         <div key={index} className="group relative h-[450px] overflow-hidden bg-black">
           {/* Background Image */}
-          <img 
+          <Image
             src={item.img} 
             alt={item.question}
+            fill
+            priority
             className="absolute inset-0 h-full w-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
+            // className="object-cover grayscale-[40%] brightness-75"
           />
           
           {/* Default State, Question */}
