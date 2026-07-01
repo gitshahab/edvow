@@ -19,8 +19,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     template: "%s | Edvow — Where Careers Begin",
-    default: "Edvow | EdTech Consulting — Online Programs for Students & Professionals",
+    default: "Edvow | EdTech Consulting — Online and Regular Programs for Students & Professionals",
   },
+  manifest: "/site.webmanifest",
   description:
     "Edvow is an elite EdTech career counselling platform helping students cut through the noise. Get 1-on-1 expert mentorship, course selection guidance, and 2026 admission support across India.",
   keywords: [
@@ -31,13 +32,20 @@ export const metadata: Metadata = {
     "College Admission Strategy",
     "1-on-1 Mentorship",
     "No-Cost EMI Education",
+    "Edvow",
+    "MBA",
+    "BBA",
+    "BA",
+    "MA",
+    "BCA",
+    "MCA"
   ],
   metadataBase: new URL("https://www.edvow.com"),
   alternates: {
     canonical: "https://www.edvow.com",
   },
   openGraph: {
-    title: "Edvow | EdTech Consulting — Online Programs for Students & Professionals",
+    title: "Edvow | EdTech Consulting — Online and Regular Programs for Students & Professionals",
     description:
       "Cut through the noise and make confident, informed decisions about your future with 1-on-1 expert mentorship and career path alignment.",
     url: "https://edvow.com",
@@ -66,15 +74,19 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any", type: "image/x-ico" },
-      { url: "/edvow.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico",       sizes: "any",   type: "image/x-icon" },
     ],
-    shortcut: "/favicon.ico",
-    apple: "/edvow.png",
+    apple: "/apple-touch-icon.png",
+    other: [
+      { rel: "icon", url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { rel: "icon", url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Edvow | EdTech Consulting — Online Programs for Students & Professionals",
+    title: "Edvow | EdTech Consulting — Online and Regular Programs for Students & Professionals",
     description:
       "Cut through the noise. Get 1-on-1 expert mentorship and career path alignment with Edvow.",
     images: ["/og-image.png"],
@@ -89,7 +101,7 @@ const organizationSchema = {
    url: "https://www.edvow.com",
   logo: "https://www.edvow.com/edvow.png",
   description:
-    "EdTech consulting firm guiding students and working professionals for higher qualifications and online programs",
+    "EdTech consulting firm guiding students and working professionals for higher qualifications and online and regular programs",
   address: {
     "@type": "PostalAddress",
     addressCountry: "IN",
@@ -100,6 +112,22 @@ const organizationSchema = {
     "https://instagram.com/edvow.consultant",
     "https://www.linkedin.com/company/edvow",
   ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Edvow",
+  "alternateName": "Edvow EdTech",
+  "url": "https://www.edvow.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.edvow.com/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
 };
 
 export default function RootLayout({
@@ -119,6 +147,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <Header />
         {children}
