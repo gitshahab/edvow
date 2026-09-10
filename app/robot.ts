@@ -5,8 +5,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
+      disallow: ["/private/", "/api/", "/_next/", "/admin/"],
     },
     sitemap: "https://edvow.com/sitemap.xml",
+    host: "https://www.edvow.com",
   };
 }
