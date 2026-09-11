@@ -38,7 +38,7 @@ export default function Home() {
         subTitle="& IT Services in India"
         para="Expert Career Counselling for Students & Professionals | 
 Custom Software Development & IT Services across India"
-        bgImg="/EdvowHeroImage.webp"
+        bgImg="/ex2.webp"
         btn1={{
           text: "Career Counselling",
           url: "/career-counselling",
